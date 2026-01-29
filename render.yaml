@@ -2,7 +2,7 @@ services:
   - type: web
     name: moltbot
     runtime: docker
-    plan: starter
+    plan: free
     dockerCommand: /bin/sh scripts/render-start.sh
     envVars:
       - key: PORT
@@ -33,7 +33,3 @@ services:
         sync: false
       - key: DEEPGRAM_API_KEY
         sync: false
-    disk:
-      name: moltbot-data
-      mountPath: /data
-      sizeGB: 1
